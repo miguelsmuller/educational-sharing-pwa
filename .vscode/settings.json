@@ -28,6 +28,7 @@
     "**/.vscode": true,
     "**/node_modules": true,
     "dist": true,
-    "e2e": true
+    "e2e": true,
+    ".angular": true
   },
 }

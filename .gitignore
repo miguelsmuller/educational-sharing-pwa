@@ -30,5 +30,15 @@ npm-debug.log*
 /plugins
 /www
 
+.angular
+
 /src/firebase-messaging-sw.js
-/src/environments/*.ts
+
+.env
+/src/environments/**
+!/src/environments/environment.exp.ts
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
