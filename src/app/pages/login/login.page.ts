@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { LoadingController, NavController } from '@ionic/angular';
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 
 import { User } from '@app/models/user.model';
 import { FireBaseService } from '@app/services/firebase.service';

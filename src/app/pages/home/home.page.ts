@@ -4,7 +4,7 @@ import { NavController } from '@ionic/angular';
 import { CommonService } from '@app/services/common.service';
 import { User } from '@app/models/user.model';
 
-import { AngularFireStorage } from '@angular/fire/storage';
+//import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 @Component({
   selector: 'app-home',
@@ -18,22 +18,22 @@ export class HomePage implements OnInit {
 
   constructor(
     private serviceNavigation: NavController,
-    private serviceStorage: AngularFireStorage,
+    //private serviceStorage: AngularFireStorage,
     private serviceCommon: CommonService,
   ) {
     this.user = JSON.parse(localStorage.getItem('mda.user'));
   }
 
   ngOnInit() {
-    this.serviceStorage.ref('/').listAll().subscribe(
-      (data) => {
-        this.listPrefix = data.prefixes;
-      },
-      (erro) => {
-        this.loadStatus = false;
-        this.serviceCommon.newAnalyticsException('FirebaseStorage Erro');
-      }
-    );
+    // this.serviceStorage.ref('/').listAll().subscribe(
+    //   (data) => {
+    //     this.listPrefix = data.prefixes;
+    //   },
+    //   (erro) => {
+    //     this.loadStatus = false;
+    //     this.serviceCommon.newAnalyticsException('FirebaseStorage Erro');
+    //   }
+    // );
   }
 
   goToPrefix(prefix: string) {

@@ -1,10 +1,11 @@
-import { Reference } from '@angular/fire/storage/interfaces';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Subject, merge } from 'rxjs';
 import { takeUntil, map, mergeMap } from 'rxjs/operators';
-import { AngularFireStorage } from '@angular/fire/storage';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { Reference } from "@angular/fire/compat/storage/interfaces";
+
 
 import { CommonService } from '@app/services/common.service';
 
